@@ -1,0 +1,13 @@
+{% if tasks_list %}
+
+    <div>There are tasks for you do.</div>
+    <ul>
+        {% for task in tasks_list %}
+            <li><a href="{% url 'todo:detail' task.id %}">{{ task.title }} </a>
+            ... is worth {{ task.value}} points!
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <p>No tasks...</p>
+{% endif %}

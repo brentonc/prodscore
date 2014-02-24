@@ -1,0 +1,10 @@
+{% if task %}
+    <h1>{{task.title}}</h1>
+    <p> {{task.description}} </p>
+    <p> Status: {{task.status}} </p>
+    <p> Value: {{task.value}} </p>
+    <p> Created: {{task.created_date}}<p>
+
+{% else %}
+    <p>No task...</p>
+{% endif %}
