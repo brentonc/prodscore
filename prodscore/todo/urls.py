@@ -6,5 +6,10 @@ urlpatterns = patterns('',
     url(r'^$', views.IndexView.as_view(), name='index'),
 
     #ex:/5/
-    url(r'^(?P<pk>\d+)/$', views.DetailView.as_view(), name='detail'),
+    #url(r'^(?P<pk>\d+)/$', views.DetailView.as_view(), name='detail'),
+    url(r'^(?P<task_id>\d+)/$', views.detail, name='detail'),
+
+    #ex:/new/
+    #url(r'^new/$', views.defai, name='new'),
+
 )
