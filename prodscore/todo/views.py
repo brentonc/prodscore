@@ -29,15 +29,3 @@ class CreateView(generic.CreateView):
     template_name = "todo/detail.html"
     form_class = TodoForm
     success_url = '/todo/'
-
-
-def create_a_task(request):
-    if request.method == 'POST':
-        form = TodoForm(request.POST)
-        if form.is_valid():
-            t = form.save()
-    else:
-        form = TodoForm()
-    c = {'form': form}
-
-    return render(request, 'todo/detail.html', c)
